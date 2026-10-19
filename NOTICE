@@ -1,0 +1,12 @@
+Page design provenance
+
+The TIDE page layout, stylesheet, and navigation scripts were adapted from the
+local SMR project page, which credits the DexTacWAM project page:
+https://dextacwam.github.io/
+
+The inherited page-design attribution specifies CC BY-SA 4.0:
+https://creativecommons.org/licenses/by-sa/4.0/
+
+TIDE-specific adaptations include the title, authors, affiliations, text,
+figures, evaluation results, robot videos, and task controls. Research figures
+and recordings have separate distribution terms.

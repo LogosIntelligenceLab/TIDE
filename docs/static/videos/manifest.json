@@ -1,0 +1,113 @@
+{
+  "figures": [
+    {
+      "file": "teaser.png",
+      "source": "ppts/teaser_enhanced.pdf",
+      "source_sha256": "32beb0b66a624802dc825299fee9080f602d3eb858b7500fc57f7505dcfa48d2"
+    },
+    {
+      "file": "pipeline.png",
+      "source": "images/pipeline.pdf",
+      "source_sha256": "620ceaad8135e1d09fd468945619cb75ad2b944f8658c7270afd32d94fb7de4e"
+    },
+    {
+      "file": "setup.png",
+      "source": "images/setup.pdf",
+      "source_sha256": "9fb9f16ef71bc67f865723a3b22ce6fc89e8584a1eb6d98443b2983bc415aac1"
+    },
+    {
+      "file": "tasks.png",
+      "source": "images/tasks.pdf",
+      "source_sha256": "c44d0092eb761832351e14e5c375efd053eadc82010e9ee0e1ea8f23050ca6c8"
+    },
+    {
+      "file": "results.png",
+      "source": "images/online_post_training_autonomy.pdf",
+      "source_sha256": "a1e5092a58728425d170e22c700f2a1539124779bea339573babbce2622349d8"
+    },
+    {
+      "file": "deployment-diagnostics.png",
+      "source": "images/deployment_diagnostics.pdf",
+      "source_sha256": "07fa59d3894a26f8fd82a881e729a0b5d909e77f594684bbf9754b1ab533f70e"
+    },
+    {
+      "file": "action-space.png",
+      "source": "images/action_space.pdf",
+      "source_sha256": "05d9b5964b2c658dd1bcb6c3be59a5132a0008e50965e4c4940e4ea36f0572eb"
+    }
+  ],
+  "videos": [
+    {
+      "file": "bit-insertion-warm-start.mp4",
+      "source": "insert_drill_baseline.mp4",
+      "source_sha256": "5d9cf1959265550fd5db37e2168ec62d9c9cb8754e7f6f1ec4ed22a33ff4830e",
+      "source_bytes": 17464413,
+      "web_sha256": "dc074e38529e763344c1a340eaa00ff8babc33822ea19c5dfa16ac0158358e88",
+      "web_bytes": 2092436,
+      "duration_seconds": 18.56
+    },
+    {
+      "file": "bit-insertion-tide.mp4",
+      "source": "insert_drill_ours.mp4",
+      "source_sha256": "157c571b4097284af244b75d6761b76d785dcc070e1d3b188405d0449fc2a9a0",
+      "source_bytes": 11089090,
+      "web_sha256": "078f20b9afabbf8bd0c8468f96954fedd424261c8c865b7d2f190ce5cbff430d",
+      "web_bytes": 1353876,
+      "duration_seconds": 9.76
+    },
+    {
+      "file": "towel-folding-warm-start.mp4",
+      "source": "fold_towel_baseline.mp4",
+      "source_sha256": "661cc1fd8a8aac99813b5338f8485e8f193683e75093fed719819e385ccca7ca",
+      "source_bytes": 20824581,
+      "web_sha256": "31c74f275fee2f9a299df99dee5e2f5773b09b0b5cec6e5ed5df4ac0a3b4d6a7",
+      "web_bytes": 2800075,
+      "duration_seconds": 17.96
+    },
+    {
+      "file": "towel-folding-tide.mp4",
+      "source": "fold_towel_ours.mp4",
+      "source_sha256": "da24bb512c2ae30d21c1f23e131f84d5870f9db7263f6910e5c4c4fde95286e0",
+      "source_bytes": 24634907,
+      "web_sha256": "6841e1f73d72107f78dbaddabc60153d473d3be8278feb7e916b9c7e2c9d8628",
+      "web_bytes": 3422026,
+      "duration_seconds": 20.92
+    },
+    {
+      "file": "towel-hanging-warm-start.mp4",
+      "source": "hang_towel_baseline.mp4",
+      "source_sha256": "4ab1bc2e981c2a617138524b75e5c7b7eef7d62a2bd2f309384fcb494a287050",
+      "source_bytes": 21863546,
+      "web_sha256": "fdc6138f875d14eded536f42260f4aef61e54a63bb0d60713699018af8412591",
+      "web_bytes": 2934383,
+      "duration_seconds": 19.0
+    },
+    {
+      "file": "towel-hanging-tide.mp4",
+      "source": "hang_towel_ours.mp4",
+      "source_sha256": "6cefd25f45eba721895619d402c5e46d5f4bd5d302983b6fc50e31c446cff21a",
+      "source_bytes": 19495544,
+      "web_sha256": "dd4a056965265ffadca65005aeb98efef01876b1ae246517310124197ed1b514",
+      "web_bytes": 2701474,
+      "duration_seconds": 16.96
+    },
+    {
+      "file": "chain-packing-warm-start.mp4",
+      "source": "close_box_baseline.mp4",
+      "source_sha256": "5c056d15ddedc1edbe973315b6e53b70cc355ce3ef09d5cf9c93e577510cebcd",
+      "source_bytes": 27747817,
+      "web_sha256": "f7a789b2898fdc834bdc6c2e4cdbbd8ca244cda03bee9cf7bd6659476934a481",
+      "web_bytes": 3658327,
+      "duration_seconds": 23.32
+    },
+    {
+      "file": "chain-packing-tide.mp4",
+      "source": "close_box_ours.mp4",
+      "source_sha256": "5fad4fe1ab9a4dd25e90aee8818583f0448fdc1f69a9cb067613a502ea2c26b4",
+      "source_bytes": 19482192,
+      "web_sha256": "d15a8123ff39131f2a2e9c2b4488630edb5c3c26dd46da93277fade7226df132",
+      "web_bytes": 2679784,
+      "duration_seconds": 15.48
+    }
+  ]
+}

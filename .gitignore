@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+output/
+*.py[cod]
+
+/docs/paper.pdf
+/docs/paper.tmp.pdf
