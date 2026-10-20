@@ -3,7 +3,8 @@
 ### [[Project]](https://logosroboticsgroup.github.io/TIDE/) [[BibTeX]](#bibtex)
 
 > [**Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation**](https://logosroboticsgroup.github.io/TIDE/)<br>
-> [Chun Gu](https://sulvxiangxin.github.io/), [Xiaofei Wei](https://waboutme.github.io/), Yiming Chen, [Bozhou Zhang](https://zbozhou.github.io/), [Juntong Zhang](https://juntongz.github.io/), [Xiatian Zhu](https://xiatian-zhu.github.io/), [Li Zhang](https://lzrobots.github.io/)
+> [Chun Gu](https://sulvxiangxin.github.io/)<sup>*</sup>, [Xiaofei Wei](https://waboutme.github.io/)<sup>*</sup>, Yiming Chen, [Bozhou Zhang](https://zbozhou.github.io/), [Juntong Zhang](https://juntongz.github.io/), [Xiatian Zhu](https://xiatian-zhu.github.io/), [Li Zhang](https://lzrobots.github.io/)<br>
+> <sup>*</sup>Equal contribution.
 
 **Official project page for "Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation".**
 
