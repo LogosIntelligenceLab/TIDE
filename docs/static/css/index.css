@@ -408,6 +408,10 @@ sup {
   width: 100%;
   height: auto;
 }
+.teaser .figure-frame--hero {
+  width: 95%;
+  margin-inline: auto;
+}
 .figure-frame figcaption {
   padding: 12px 18px;
   color: var(--muted);
