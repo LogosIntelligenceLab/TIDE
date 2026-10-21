@@ -123,7 +123,7 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content">
               <p>Large pretrained robot foundation models provide strong priors for manipulation, yet adapting them to target tasks with offline teleoperated demonstrations often fails to cover the contact-rich, recovery, and precision-critical states encountered during deployment. Existing methods mitigate this issue by augmenting offline demonstrations with human-in-the-loop data or online reinforcement learning. Despite this, offline post-training adapts slowly because it cannot immediately absorb deployment experience, while online RL typically relies on value functions or auxiliary actor-critic models, increasing both training complexity and instability.</p>
-              <p>We present <strong>TIDE (Training In DEployment)</strong>, a human-in-the-loop online post-training system. TIDE introduces a provenance-conditioned supervised learning framework that updates the policy online from human interventions and policy-generated rollouts collected during deployment, without a learned critic, reward model, or action scorer. Across four real-world bimanual manipulation tasks, TIDE improves milestone-normalized task progress and binary full-task completion over the warm-start policy and matched additional offline demonstrations, and performs comparably to the Fixed-policy collection baseline while making updated checkpoints available during deployment. Each task-specific online post-training session, from the start of deployment rollouts until the final checkpoint is available, completes in less than one hour while learning and checkpoint handling run asynchronously.</p>
+              <p>We present <strong>TIDE (Training In DEployment)</strong>, a human-in-the-loop online post-training system. TIDE introduces a provenance-conditioned supervised learning framework that updates the policy online from human interventions and policy-generated rollouts collected during deployment, without a learned critic, reward model, or action scorer. Across four real-world bimanual manipulation tasks, TIDE improves milestone-normalized task progress and binary full-task completion over the warm-start policy and matched additional offline demonstrations, and performs comparably to the fixed-policy collection baseline while making updated checkpoints available during deployment. Each task-specific online post-training session, from the start of deployment rollouts until the final checkpoint is available, completes in less than one hour while learning and checkpoint handling run asynchronously.</p>
             </div>
           </div>
         </div>
@@ -153,45 +153,47 @@
             </figure>
           </div>
           <p class="media-note">Only episodes manually confirmed as successful enter the online dataset. The video backbone, adapter, action expert, and source embeddings are updated; the text encoder and video VAE remain frozen.</p>
+          <p class="media-note">The reported session time of less than one hour includes robot execution, human takeover, episode resets, asynchronous data processing, training, and checkpoint handling, from the first deployment rollout until the final checkpoint is deployable. Initial setup and final autonomous evaluation are excluded.</p>
         </div>
       </section>
       <section class="section benchmark-section" id="evaluation">
         <div class="container">
           <p class="section-index">03 / Four tasks, one evaluation protocol</p>
           <h2 class="title is-3">From precision contact to deformable objects.</h2>
-          <p class="section-intro">Each method–task pair is evaluated on 20 autonomous rollouts from the same predefined initial-state set, with no human takeover. We report milestone-normalized task progress and full-task completion separately.</p>
+          <p class="section-intro">Each method–task pair is evaluated on 20 autonomous rollouts from the same predefined initial-state set, with no human takeover. We report milestone-normalized task progress and full-task completion separately. TIDE uses the human source condition (ℓ = 0) during these evaluations.</p>
           <figure class="figure-frame">
-            <img src="static/images/tasks.png" width="2400" height="1152" loading="lazy" alt="Four real-world tasks: Bit Insertion, Towel Folding, Towel Hanging, and Chain Packing." />
+            <img src="static/images/tasks.png" width="2400" height="1150" loading="lazy" alt="Four real-world tasks: Bit Insertion, Towel Folding, Towel Hanging, and Chain Packing." />
             <figcaption>Bit Insertion · Towel Folding · Towel Hanging · Chain Packing</figcaption>
           </figure>
           <div class="protocol-grid">
             <div><h3>Task progress</h3><p>Completed milestones divided by the task's milestone count, averaged over 20 rollouts.</p></div>
             <div><h3>Full-task completion</h3><p>All milestones must be completed. Counts are reported as k/20.</p></div>
-            <div><h3>Matched comparisons</h3><p>Warm-start, additional offline demonstrations, Fixed-policy collection, and TIDE share the task-specific starting checkpoint.</p></div>
+            <div><h3>Matched comparisons</h3><p>Warm-start, additional offline demonstrations, Fixed Policy, and TIDE share the task-specific starting checkpoint.</p></div>
           </div>
+          <p class="media-note"><strong>Fixed Policy</strong> is the fixed-policy collection baseline: the initial warm-start policy remains fixed throughout human-in-the-loop collection, matched to TIDE by duration. Training follows collection using the same objective, buffer configuration, filtering rules, and total optimizer-update budget as TIDE.</p>
         </div>
       </section>
       <section class="section" id="results">
         <div class="container">
           <p class="section-index">04 / Autonomous performance &amp; deployment diagnostics</p>
           <h2 class="title is-3">Better policies, available during deployment.</h2>
-          <p class="section-intro">TIDE improves autonomous task performance over Warm-start and matched additional Offline demos. Its final performance is comparable to Fixed-policy; updated checkpoints become available within the deployment session.</p>
+          <p class="section-intro">TIDE improves autonomous task performance over Warm-start and matched additional Offline demos. Its final performance is comparable to Fixed Policy; updated checkpoints become available within the deployment session.</p>
           <div class="results-layout">
             <figure class="figure-frame results-figure">
-              <img src="static/images/results.png" width="2400" height="2300" loading="lazy" alt="Task progress and full-task completion for Warm-start, Offline demos, Fixed-policy, and TIDE across four manipulation tasks." />
+              <img src="static/images/results.png" width="2400" height="2300" loading="lazy" alt="Task progress and full-task completion for Warm-start, Offline demos, Fixed Policy, and TIDE across four manipulation tasks." />
               <figcaption>Top: milestone-normalized task progress. Bottom: binary full-task completion. Each method–task pair uses 20 autonomous rollouts.</figcaption>
             </figure>
             <div class="results-summary">
               <h3>Two complementary outcomes.</h3>
               <p>Progress credits intermediate milestones. Completion requires the entire task.</p>
-              <p>TIDE matches Fixed-policy on Bit Insertion and Towel Hanging progress, and is higher on Towel Folding and Chain Packing. Completion is tied on Bit Insertion and higher by one or two rollouts on the remaining tasks.</p>
+              <p>TIDE matches Fixed Policy on Bit Insertion and Towel Hanging progress, and is higher on Towel Folding and Chain Packing. Completion is tied on Bit Insertion and higher by one or two rollouts on the remaining tasks.</p>
               <a class="text-link" href="#demos">Watch the real-robot examples ↓</a>
             </div>
           </div>
           <div class="results-table-wrap">
             <table class="results-table">
               <caption>Full-task completions out of 20 autonomous rollouts. The paper reports milestone-normalized progress separately.</caption>
-              <thead><tr><th scope="col">Task</th><th scope="col">Warm-start</th><th scope="col">Offline demos</th><th scope="col">Fixed-policy</th><th scope="col">TIDE</th></tr></thead>
+              <thead><tr><th scope="col">Task</th><th scope="col">Warm-start</th><th scope="col">Offline demos</th><th scope="col">Fixed Policy</th><th scope="col">TIDE</th></tr></thead>
               <tbody>
                 <tr><th scope="row">Bit Insertion</th><td>5/20</td><td>6/20</td><td>16/20</td><td class="is-highlight"><strong>16/20</strong></td></tr>
                 <tr><th scope="row">Towel Folding</th><td>4/20</td><td>6/20</td><td>12/20</td><td class="is-highlight"><strong>13/20</strong></td></tr>
@@ -255,11 +257,11 @@
         <div class="container">
           <p class="section-index">06 / Citation</p>
           <div class="bibtex-header"><h2 class="title is-3">BibTeX</h2><button class="button copy-bibtex-btn" type="button" onclick="copyBibTeX()" aria-label="Copy BibTeX citation"><span class="copy-text">Copy</span></button></div>
-          <pre><code id="bibtex-code">@article{gu2026tide,
+          <pre><code id="bibtex-code">@misc{gu2026tide,
   title         = {Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation},
   author        = {Gu, Chun and Wei, Xiaofei and Chen, Yiming and Zhang, Bozhou and Zhang, Juntong and Zhu, Xiatian and Zhang, Li},
-  journal       = {arXiv preprint},
-  year          = {2026}
+  year          = {2026},
+  url           = {https://logosroboticsgroup.github.io/TIDE/}
 }</code></pre>
         </div>
       </section>

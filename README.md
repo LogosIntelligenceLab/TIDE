@@ -11,10 +11,10 @@
 ## BibTeX
 
 ```bibtex
-@article{gu2026tide,
+@misc{gu2026tide,
   title         = {Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation},
   author        = {Gu, Chun and Wei, Xiaofei and Chen, Yiming and Zhang, Bozhou and Zhang, Juntong and Zhu, Xiatian and Zhang, Li},
-  journal       = {arXiv preprint},
-  year          = {2026}
+  year          = {2026},
+  url           = {https://logosroboticsgroup.github.io/TIDE/}
 }
 ```
