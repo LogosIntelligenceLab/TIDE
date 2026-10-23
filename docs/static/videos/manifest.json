@@ -114,6 +114,6 @@
   "paper": {
     "file": "static/papers/TIDE.pdf",
     "source": "build/root.pdf",
-    "source_sha256": "2fd845ce7280baf3757de9c99425d53ff2d8144bc5b419e78d0a8340c42bf375"
+    "source_sha256": "a73ce1f0651bb64355c2e1064fb99df882896e8cbec259d59fd2b238c8f98790"
   }
 }

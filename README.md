@@ -1,6 +1,6 @@
 # Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation
 
-### [[arXiv]](https://arxiv.org/abs/2610.29264) [[PDF]](https://arxiv.org/pdf/2610.29264) [[Project]](https://logosroboticsgroup.github.io/TIDE/) [[BibTeX]](#bibtex)
+### [[arXiv]](https://arxiv.org/abs/2610.29264) [[PDF]](https://arxiv.org/pdf/2610.29264) [[Project]](https://logosintelligencelab.github.io/TIDE/) [[BibTeX]](#bibtex)
 
 > [**Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation**](https://arxiv.org/abs/2610.29264)<br>
 > [Chun Gu](https://sulvxiangxin.github.io/)<sup>*</sup>, [Xiaofei Wei](https://waboutme.github.io/)<sup>*</sup>, Yiming Chen, [Bozhou Zhang](https://zbozhou.github.io/), [Juntong Zhang](https://juntongz.github.io/), [Xiatian Zhu](https://xiatian-zhu.github.io/), [Li Zhang](https://lzrobots.github.io/)<sup>†</sup><br>
