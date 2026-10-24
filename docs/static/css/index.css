@@ -937,12 +937,40 @@ code {
 .publication-hero {
   min-height: 100svh;
   display: grid;
-  grid-template-rows: minmax(48px, 1fr) auto minmax(210px, 1fr);
+  grid-template-rows: minmax(84px, 1fr) auto minmax(210px, 1fr);
   justify-content: stretch;
   text-align: center;
 }
 #top {
   scroll-margin-top: 0;
+}
+.hero-top {
+  position: absolute;
+  top: 26px;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  text-align: left;
+}
+.lab-mark {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+}
+.lab-mark span {
+  display: block;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.19em;
+  line-height: 1.4;
+  opacity: 0.82;
+}
+.lab-mark:hover {
+  text-decoration: none;
+}
+.lab-mark:focus-visible {
+  outline-color: #fff;
 }
 .hero-art {
   inset: 0;
@@ -1012,9 +1040,22 @@ code {
   flex-wrap: wrap;
   gap: 12px 24px;
 }
+@media (max-width: 720px) {
+  .hero-top {
+    top: 22px;
+    left: 22px;
+    right: 22px;
+  }
+  .lab-mark {
+    font-size: 14px;
+  }
+  .lab-mark span {
+    font-size: 6px;
+  }
+}
 @media (max-width: 540px) {
   .publication-hero {
-    grid-template-rows: minmax(32px, 1fr) auto minmax(210px, 1fr);
+    grid-template-rows: minmax(84px, 1fr) auto minmax(210px, 1fr);
   }
   .hero-status-detail {
     width: 100%;
